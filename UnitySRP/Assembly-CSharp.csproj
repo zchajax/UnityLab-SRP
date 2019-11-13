@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraRenderer.cs" />
+    <Compile Include="Assets\Scripts\CameraRenderer.Editor.cs" />
     <Compile Include="Assets\Scripts\CustomRPAsset.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/GitHub/UnityLab-SRP/UnitySRP/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
