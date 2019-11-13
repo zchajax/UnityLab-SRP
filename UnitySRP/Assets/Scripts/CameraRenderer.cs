@@ -37,11 +37,21 @@ public class CameraRenderer
             criteria = SortingCriteria.CommonOpaque
         };
         var drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings);
-        var filteringSettings = new FilteringSettings(RenderQueueRange.all);
+        var filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
 
+        // Draw Opaque Objects
         context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
 
+        // Draw Skybox
         context.DrawSkybox(camera);
+
+        // reset settings to draw transparent objects
+        sortingSettings.criteria = SortingCriteria.CommonTransparent;
+        drawingSettings.sortingSettings = sortingSettings;
+        filteringSettings.renderQueueRange = RenderQueueRange.transparent;
+
+        // Draw Transparent Objects
+        context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
     }
 
     private void Setup()
