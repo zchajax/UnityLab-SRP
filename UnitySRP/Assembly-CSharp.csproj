@@ -66,6 +66,10 @@
     <Compile Include="Assets\Scripts\CameraRenderer.cs" />
     <Compile Include="Assets\Scripts\CameraRenderer.Editor.cs" />
     <Compile Include="Assets\Scripts\CustomRPAsset.cs" />
+    <None Include="Assets\Shaders\UnlitPass.hlsl" />
+    <None Include="Assets\ShaderLibrary\Common.hlsl" />
+    <None Include="Assets\ShaderLibrary\UnityInput.hlsl" />
+    <None Include="Assets\Shaders\Unlit.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/GitHub/UnityLab-SRP/UnitySRP/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
