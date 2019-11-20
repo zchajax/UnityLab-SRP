@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\CameraRenderer.cs" />
     <Compile Include="Assets\Scripts\CameraRenderer.Editor.cs" />
     <Compile Include="Assets\Scripts\CustomRPAsset.cs" />
+    <Compile Include="Assets\Scripts\PerObjectMaterialProperties.cs" />
     <None Include="Assets\Shaders\UnlitPass.hlsl" />
     <None Include="Assets\ShaderLibrary\Common.hlsl" />
     <None Include="Assets\ShaderLibrary\UnityInput.hlsl" />
