@@ -3,6 +3,8 @@
 
 #include "../ShaderLibrary/Common.hlsl"
 
+float4 _BaseColor;
+
 float4 UnlitPassVertex(float3 positionOS : POSITION) : SV_POSITION
 {
     float3 positionWS = TransformObjectToWorld(positionOS);
@@ -11,7 +13,7 @@ float4 UnlitPassVertex(float3 positionOS : POSITION) : SV_POSITION
 
 float4 UnlitPassFragment() : SV_TARGET
 {
-    return 0.0;
+    return _BaseColor;
 }
 
 #endif // CUSTOM_UNLIT_PASS_INCLUDED
