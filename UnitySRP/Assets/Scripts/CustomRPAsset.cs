@@ -13,6 +13,12 @@ public class CustomRPAsset : RenderPipelineAsset
 public class CustomRP : RenderPipeline
 {
     CameraRenderer renderer = new CameraRenderer();
+
+    public CustomRP()
+    {
+        GraphicsSettings.useScriptableRenderPipelineBatching = true;
+    }
+
     protected override void Render(ScriptableRenderContext context, Camera[] cameras)
     {
         foreach (var camera in cameras)
