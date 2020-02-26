@@ -8,6 +8,8 @@ public class PerObjectMaterialProperties : MonoBehaviour
 
     static int baseTexSTId = Shader.PropertyToID("_BaseMap_ST");
 
+    static int cutoffId = Shader.PropertyToID("_Cutoff");
+
     static MaterialPropertyBlock block;
 
     [SerializeField]
@@ -15,6 +17,9 @@ public class PerObjectMaterialProperties : MonoBehaviour
 
     [SerializeField]
     Vector4 baseTexST = new Vector4(1, 1, 0, 0);
+
+    [SerializeField]
+    float cutoff = 1.0f;
 
     private void OnValidate()
     {
@@ -25,6 +30,7 @@ public class PerObjectMaterialProperties : MonoBehaviour
 
         block.SetColor(baseColorId, baseColor);
         block.SetVector(baseTexSTId, baseTexST);
+        block.SetFloat(cutoffId, cutoff);
         GetComponent<Renderer>().SetPropertyBlock(block);
     }
 }
