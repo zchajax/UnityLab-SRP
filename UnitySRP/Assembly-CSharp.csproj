@@ -58,9 +58,13 @@
      <Compile Include="Assets\Scripts\CameraRenderer.Editor.cs" />
      <Compile Include="Assets\Scripts\CameraRenderer.cs" />
      <Compile Include="Assets\Scripts\CustomRPAsset.cs" />
+     <Compile Include="Assets\Scripts\Lighting.cs" />
      <Compile Include="Assets\Scripts\PerObjectMaterialProperties.cs" />
+     <None Include="Assets\ShaderLibrary\Light.hlsl" />
      <None Include="Assets\Shaders\LitPass.hlsl" />
      <None Include="Assets\ShaderLibrary\UnityInput.hlsl" />
+     <None Include="Assets\ShaderLibrary\Surface.hlsl" />
+     <None Include="Assets\ShaderLibrary\Lighting.hlsl" />
      <None Include="Assets\Shaders\Unlit.shader" />
      <None Include="Assets\Shaders\UnlitPass.hlsl" />
      <None Include="Assets\Shaders\Lit.shader" />
