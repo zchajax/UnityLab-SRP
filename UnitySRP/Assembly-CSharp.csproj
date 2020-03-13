@@ -68,6 +68,7 @@
      <None Include="Assets\Shaders\Unlit.shader" />
      <None Include="Assets\Shaders\UnlitPass.hlsl" />
      <None Include="Assets\Shaders\Lit.shader" />
+     <None Include="Assets\ShaderLibrary\BRDF.hlsl" />
      <None Include="Assets\ShaderLibrary\Common.hlsl" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/zchajax/UnityLab-SRP/UnitySRP/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

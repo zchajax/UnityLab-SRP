@@ -274,6 +274,8 @@ MonoBehaviour:
   baseColor: {r: 0.2628859, g: 0.3207547, b: 0.049928803, a: 1}
   baseTexST: {x: 1, y: 1, z: 0, w: 0}
   cutoff: 1
+  metallic: 0
+  smoothness: 0.5
 --- !u!65 &88209909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -360,6 +362,7 @@ GameObject:
   - component: {fileID: 172511141}
   - component: {fileID: 172511140}
   - component: {fileID: 172511139}
+  - component: {fileID: 172511143}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -441,6 +444,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &172511143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172511138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7813552766c264bb4fd0c1166fb92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  baseTexST: {x: 1, y: 1, z: 0, w: 0}
+  cutoff: 1
+  metallic: 0.502
+  smoothness: 0.673
 --- !u!1 &273212436
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +496,8 @@ MonoBehaviour:
   baseColor: {r: 0.26415092, g: 0.23050906, b: 0.23050906, a: 0.48235294}
   baseTexST: {x: 1, y: 1, z: 0, w: 0}
   cutoff: 0.19
+  metallic: 0
+  smoothness: 0.5
 --- !u!65 &273212438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1031,6 +1053,8 @@ MonoBehaviour:
   baseColor: {r: 0.6509434, g: 0.12588999, b: 0.12588999, a: 0.3372549}
   baseTexST: {x: 1, y: 1, z: 0, w: 0}
   cutoff: 0.02
+  metallic: 0
+  smoothness: 0.5
 --- !u!65 &662192011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1290,7 +1314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &851920567
 Light:
   m_ObjectHideFlags: 0
@@ -1769,6 +1793,8 @@ MonoBehaviour:
   baseColor: {r: 0.5377358, g: 0.48446953, b: 0.48446953, a: 1}
   baseTexST: {x: 1, y: 1, z: 0, w: 0}
   cutoff: 1
+  metallic: 0
+  smoothness: 0.5
 --- !u!65 &972271261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2111,3 +2137,5 @@ MonoBehaviour:
   baseColor: {r: 0.23921567, g: 0.58663565, b: 0.69803923, a: 1}
   baseTexST: {x: 1, y: 1, z: 0, w: 0}
   cutoff: 1
+  metallic: 0
+  smoothness: 0.5
