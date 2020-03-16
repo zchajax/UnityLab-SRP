@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Custom-Lit
   m_Shader: {fileID: 4800000, guid: 991a45dc1c36d44e5b7c6b5d86e99415, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _PREMULTIPLY_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -72,6 +72,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _PremulAlpha: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
