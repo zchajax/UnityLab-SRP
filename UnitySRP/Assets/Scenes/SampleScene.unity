@@ -459,8 +459,8 @@ MonoBehaviour:
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   baseTexST: {x: 1, y: 1, z: 0, w: 0}
   cutoff: 1
-  metallic: 0.502
-  smoothness: 0.673
+  metallic: 0.517
+  smoothness: 0.572
 --- !u!1 &273212436
 GameObject:
   m_ObjectHideFlags: 0
