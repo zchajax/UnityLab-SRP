@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\CustomRPAsset.cs" />
      <Compile Include="Assets\Scripts\Lighting.cs" />
      <Compile Include="Assets\Scripts\PerObjectMaterialProperties.cs" />
+     <Compile Include="Assets\Scripts\ShadowSettings.cs" />
      <None Include="Assets\ShaderLibrary\Light.hlsl" />
      <None Include="Assets\Shaders\LitPass.hlsl" />
      <None Include="Assets\ShaderLibrary\UnityInput.hlsl" />

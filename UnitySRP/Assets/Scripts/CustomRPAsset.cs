@@ -13,9 +13,12 @@ public class CustomRPAsset : RenderPipelineAsset
     [SerializeField]
     bool useSRPBatcher = true;
 
+    [SerializeField]
+    ShadowSettings shadows = default;
+
     protected override RenderPipeline CreatePipeline()
     {
-        return new CustomRP(useDynamicBatching, useGPUInstancing, useSRPBatcher);
+        return new CustomRP(useDynamicBatching, useGPUInstancing, useSRPBatcher, shadows);
     }
 }
 
@@ -24,11 +27,14 @@ public class CustomRP : RenderPipeline
     CameraRenderer renderer = new CameraRenderer();
     bool useDynamicBatching;
     bool useGPUInstancing;
+    ShadowSettings shadowSettings;
 
-    public CustomRP(bool useDynamicBatching, bool useGPUInstancing, bool useSRPBatcher)
+    public CustomRP(bool useDynamicBatching, bool useGPUInstancing, bool useSRPBatcher,
+        ShadowSettings shadowSettings)
     {
         this.useDynamicBatching = useDynamicBatching;
         this.useGPUInstancing = useGPUInstancing;
+        this.shadowSettings = shadowSettings;
 
         GraphicsSettings.useScriptableRenderPipelineBatching = useSRPBatcher;
         GraphicsSettings.lightsUseLinearIntensity = true;
@@ -38,7 +44,8 @@ public class CustomRP : RenderPipeline
     {
         foreach (var camera in cameras)
         {
-            renderer.Render(context, camera, this.useDynamicBatching, this.useGPUInstancing);
+            renderer.Render(context, camera, this.useDynamicBatching, this.useGPUInstancing,
+                shadowSettings);
         }
     }
 }
