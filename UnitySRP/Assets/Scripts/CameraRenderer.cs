@@ -32,11 +32,17 @@ public partial class CameraRenderer
             return;
         }
 
-        Setup();
+        buffer.BeginSample(SampleName);
+        ExecuteBuffer();
         lighting.Setup(context, cullingResults, shadowSettings);
+        buffer.EndSample(SampleName);
+        ExecuteBuffer();
+
+        Setup();
         DrawVisiableGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
         DrawGizmos();
+        lighting.Cleanup();
         Submit();
     }
 

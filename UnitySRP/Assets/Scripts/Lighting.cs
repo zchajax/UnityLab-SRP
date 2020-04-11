@@ -34,6 +34,7 @@ public class Lighting
         buffer.BeginSample(bufferName);
         shadows.Setup(context, cullingResults, shadowSettings);
         SetupLights();
+        shadows.Render();
         buffer.EndSample(bufferName);
         context.ExecuteCommandBuffer(buffer);
         buffer.Clear();
@@ -68,5 +69,10 @@ public class Lighting
         dirLightColors[index] = visiblelLight.finalColor;
         dirLightDirections[index] = -visiblelLight.localToWorldMatrix.GetColumn(2);
         shadows.ReserveDirectionalShadows(visiblelLight.light, index);
+    }
+
+    public void Cleanup()
+    {
+        shadows.Cleanup();
     }
 }
